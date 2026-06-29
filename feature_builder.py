@@ -94,7 +94,7 @@ def coerce_feature_columns(df: pd.DataFrame, skip: Iterable[str]) -> pd.DataFram
             numeric_col = df[col]
         else:
             df[col] = numeric_col
-        if df[col].dtype == object:
+        if not pd.api.types.is_numeric_dtype(df[col]):
             upper_vals = (
                 df[col].dropna().astype(str).str.upper().unique().tolist()
             )
