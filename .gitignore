@@ -1,6 +1,6 @@
 # Output files from feature_builder.py
 combined_features.*
-walterKNN.py
+WalterKNN.py
 
 # Python
 __pycache__/
